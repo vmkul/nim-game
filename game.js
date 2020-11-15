@@ -147,7 +147,6 @@ const botTurn = (state, heap) => {
   });
 
   console.log(nextState);
-  console.log(state.chipCount - nextState.chipCount);
   heap.removeCount(state.chipCount - nextState.chipCount);
   const nextPlayer = currentState.currentPlayer === 'MAX' ? 'MIN' : 'MAX';
   currentState = new GameState(nextState.chipCount, nextPlayer, null);
